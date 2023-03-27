@@ -1,0 +1,631 @@
+---
+title: "**VARIABLE ALEATORIA**"
+author: Métodos y Simulación Estadística
+output: 
+  learnr::tutorial:
+    css: css/learnr_metadocencia.css
+    progressive: true # los encabezados de tercer nivel (###) son revelados progresivamente
+    allow_skip: true # permite saltearse los ejercicios. 
+    language:
+      es: tutorial_es.json
+description: "Tutorial interactivo conceptos básicos de probabilidad" # Esta descripción se ve en el panel Tutorial de RStudio 
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE,
+                 exercise.warn_invisible = FALSE)
+# colores
+c1="#FF7F00" # NARANJA COLOR PRINCIPAL
+c2="#034a94" # AZUL FUERTE COLOR SECUNDARIO  
+c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO  
+c4="#686868" # GRIS COLOR TEXTO 
+
+```
+## **PRESENTACIÓN**
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("images/banner2.png")
+```
+
+El presente tutorial contiene preguntas y problemas  relacionadas con los temas abordados en la Unidad 2 sobre Variable Aleatoria. Conceptos importantes para la compresión de la Inferencia Estadística.
+
+</br>
+  
+### **CONCEPTOS**
+
+</br>
+
+##### **VARIABLE ALEATORIA**
+
+Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un número . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$). Asociado a cada número se define un valor de probabilidad a través de $f(x)$. 
+
+</br>
+
+#### **VARIABLES DISCRETAS**
+
+Una variable $X$ se considera **DISCRETA** si su rango $R_{_{X}}$ es un conjunto finito o infinito numerable de valores.
+
+</br>
+
+#### **VARIABLES CONTINUAS**
+
+Se considera **CONTINUA** si su rango $R_{_{X}}$ es un conjunto de valores infinito no numerable y generalmente corresponde a unión de intervalos.
+
+</br>
+
+#### **FUNCIÓN DE DISTRIBUCIÓN DE PROBABILIDAD**
+
+Para $X$ un variable aleatoria discreta, su función de distribución de probabilidad estará dada por $f(x)$, la cual proporciona las probabilidades asociadas a todos los valores de su rango $R_{X}$ . Esta función debe cumplir las siguientes propiedades: ($i$) $f(x) = P(X=x) \geq 0$, ($ii$) $\sum_{R_X} f(x) = 1$
+
+</br>
+
+#### **FUNCIÓN DE DENSIDAD DE PROBABILIDAD**
+
+Para el caso de las variables aleatorias continuas se define como función de densidad de probablidad a $f(x)$, tal que cumpla las siguientes condiciones: ($i$) $f(x) \geq 0$, ($ii$) $\int\limits_{-\infty}^{+\infty}f(x)\:dx =1$. 
+Además se define : $P(a < X < b)=\int\limits_{a}^{b}f(x)\:dx$
+
+</br>
+
+#### **FUNCIÓN DE PROBABILIDAD ACUMULADA**
+
+Para $X$ una variable aleatoria continua con función de densidad $f_{X}(x)$, se define la  función de distribución acumulada, $F_{X}(x)$, como: 
+
+Caso discreto
+$$F(x)=P(X\leq x)=\sum _{t \leq x}f(t)$$ 
+Caso continuo
+$$F_{_{X,Y}}(x,y) = P(X\leq x; Y \leq y) = \int_{-\infty}^{x} \int_{-\infty}^{y} f(s,t) \:ds \:dt$$
+</br>
+
+#### **VALOR ESPERADO**
+
+Sea $X$ una variable aleatoria discreta o continua. La esperanza matemática de $X$ o valor esperado, $E(X)$ o bien $\mu$, se define respectivamente como: 
+
+</br>
+
+Caso discreto
+$$E(X) = \sum\limits_{x}^{}x_{i}f(x_{i})$$ 
+Caso continuo
+$$E(X) = \int\limits_{-\infty}^{+\infty}x f(x) \:dx$$  
+
+
+</br>
+
+#### **VARIANZA**
+
+Se define como varianza la diferencia entre el segundo momento y el cuadrado del primer momento 
+
+$$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}  = \sigma^{2}$$ 
+</br>
+
+#### **VARIABLE ALEATORIA CONJUNTA**
+
+Se define como una pareja de de variables aleatorias ($X,Y$), que poseen una distribución de probabilidad conjunta $f_{_{X,Y}}(x,y)$, que debe ser positiva en todos sus valores y además que el conjunto total de sus valores debe ser igual a uno.
+
+</br>
+
+Caso discreto-discreto
+$$\displaystyle\sum\limits_{x=x_{(1)}}^{x_{(n)}}\displaystyle\sum\limits_{y=y_{(1)}}^{y_{(n)}}f_{_{X,Y}}(x,y)=1$$
+
+Caso continuo-continuo
+$$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y) \:dx \:dy  = 1$$
+
+</br>
+
+#### **VALOR ESPERADO CONJUNTO**
+
+Caso discreto-discreto:
+$$E[X,Y]=\displaystyle\sum_{R_{X}}\displaystyle\sum_{R_{Y}} xy f(x,y)$$
+
+Caso continuo-continuo
+$$E[XY]= \displaystyle\int_{-\infty}^{\infty} \displaystyle\int_{-\infty}^{\infty} x.y.f(x,y) \,dx \,dy$$
+
+</br>
+
+#### **COVARIANZA**
+
+Indicador de variabilidad bivariado
+
+$$COV[X,Y]=E[XY]-E[X]E[Y]$$
+
+</br>
+
+#### **CORRELACIÓN**
+
+Indicador del grado de asociación lineal entre dos variables
+
+$$\rho=\displaystyle\frac{COV[XY]}{\displaystyle\sqrt{V[X].V[Y]}} $$
+
+  
+</br></br>
+
+### **MAPA** 
+  
+
+```{r, echo=FALSE, , out.width="100%", fig.align = "center"}
+knitr::include_graphics("images/variables.png")  
+
+```
+
+## **CUESTIONARIO**
+
+### **Pregunta 1**
+
+En relación con la distribución normal con función de densidad :
+
+$$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}	 \hspace{.5cm}  -\infty \leq  x \leq \infty $$ 
+
+```{r quiz_1}
+
+quiz(
+  question("¿Cuál de las siguientes afirmaciones es falsa?:", 
+           correct = "Correcto!, la distribución normal corresponde a una variable continua.", 
+           allow_retry = TRUE,
+           answer("Es una distribución de probabilidad teórica discreta.", correct = TRUE),
+           answer("La distancia entre el eje vertical trazado en la media y el punto de inflexión de la curva es la desviación estándar.", message = "Nop...intentalo de nuevo!"),
+           answer("Es simétrica y unimodal.", message = "Incorrecto. Intenta de nuevo!."),
+           answer("Cualquier valor entre – infinito y + infinito es teóricamente posible.", message = "Cerca, pero no...intentalo de nuevo!"),
+           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+           submit_button = "Enviar respuesta",
+           try_again_button = "Intentar de nuevo"),
+  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+  caption = " "
+)
+
+```
+
+
+### **Pregunta 2**
+
+Cuando se requiere calcular la probabilidad de $P(X = x)$, en el caso de una variable aleatoria discreta,
+
+```{r quiz_2}
+
+quiz(
+  question("Es necesario conocer para hallar su valor: ", 
+           correct = "Correcto!, al reemplazar x en f(x) se obtiene el valor de P(X=x).", 
+           allow_retry = TRUE,
+           answer("V[X]", message = "No...intentalo de nuevo!"),
+           answer("F(x)", message = "No...intentalo de nuevo!"),
+           answer("f(x)", correct = TRUE),
+           answer("E[X]", message = "Incorrecto. Intenta de nuevo!."),
+           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+           submit_button = "Enviar respuesta",
+           try_again_button = "Intentar de nuevo"),
+  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+  caption = "  "
+)
+
+```
+
+
+### **Pregunta 3**
+
+La siguiente función
+
+$$\begin{equation*}
+		f(x)=\left\lbrace
+		\begin{array}{lll}
+			\lambda \exp{\{-\lambda x\}}  &,& x > 0   \\
+			&&\\
+			0 &,& x \leq 0 
+		\end{array}
+		\right.
+	\end{equation*}$$
+	
+	está definida para una variable aleatoria.
+
+```{r quiz_3}
+
+quiz(
+  question("De ella podemos afirmar que", 
+           correct = "Correcto!, f(x) corresponde a un modelo continuo, más concretamente el modelo exponencial.", 
+           allow_retry = TRUE,
+           answer("La variable aleatoria X,es discreta  para valores mayores a cero", message = "No,...pero intentalo de nuevo!"),
+           answer("La variable no esta definida para valores discretos", message = "No...intentalo de nuevo!"),
+           answer("La variable X, es continua con valores mayores a cero", correct = TRUE),
+           answer("f(x) no cumple con las condiciones requeridas y por tanto X no es una variable aleatoria", message = "Incorrecto. Intenta de nuevo!."),
+           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+           submit_button = "Enviar respuesta",
+           try_again_button = "Intentar de nuevo"),
+  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+  caption = " "
+)
+
+```
+
+### **Pregunta 4**
+
+Para una variable aleatoria continua con función de densidad de probabilidad :
+
+$$\begin{equation*}
+		f(x)=\left\lbrace
+		\begin{array}{lll}
+			k   &,& 0 \leq x \leq 1   \\
+			&&\\
+			0 &,& \text{en otro caso} 
+		\end{array}
+		\right.
+	\end{equation*}$$
+
+```{r quiz_4}
+
+quiz(
+  question("f(x) será una función de densidad de probabilidad si: ", 
+           correct = "Correcto!, f(x) corresponde a una linea horizontal entre 0 y 1. El área por debajo de la función conforma un cuadrado con base uno y por tanto la altura (k) debe ser igual a uno.", 
+           allow_retry = TRUE,
+           answer("k = 0", message = "No, pero intentalo de nuevo!"),
+           answer("k = 1", correct = TRUE),
+           answer("k = 1/2", message = "Incorrecto. Intenta de nuevo!."),
+           answer("k = 1/4", message = "No...intentalo de nuevo!"),
+           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+           submit_button = "Enviar respuesta",
+           try_again_button = "Intentar de nuevo"),
+  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+  caption = " "
+)
+
+```
+
+
+### **Pregunta 5**
+
+La siguiente función $f_{_{XY}}(x,y)$ define las probabidades conjuntas entre X: número de inconvenientes presentadas en un vehiculo de carga en su viaje de ida  y Y: el número de inconvenientes que se presentan en el viaje de regreso.
+
+|    |        |       |  $x$ |      |
+|:--:|:------:|:-----:|:----:|:----:|
+|    |$f(x,y)$| 1     |  2   |  3   |
+|$y$ |  1     | 0.05  | 0.05 | 0.10 |
+|    |  2     | 0.05 | 0.10 | 0.35  |
+|    |  3     | 0     | 0.20 | 0.10 |
+
+```{r quiz_5}
+
+quiz(
+  question("No es correcto afirmar que:", 
+           correct = "Correcto!, P(X<2 ; Y<2) = 0.05.", 
+           allow_retry = TRUE,
+           answer("E[X] = 0.1 + 2*0.35 + 3*0.55", message = "No...intentalo de nuevo!"),
+           answer("P(2,2) = 0.10", message = "No...intentalo de nuevo!"),
+           answer("E[Y] = 0.2+0.50*2+0.30*3", message = "Incorrecto. Intenta de nuevo!."),
+           answer("P(X<2 ; Y<2) = 0.05+ 0.05", correct = TRUE),
+           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+           submit_button = "Enviar respuesta",
+           try_again_button = "Intentar de nuevo"),
+  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+  caption = " "
+)
+
+```
+
+
+### **Pregunta 6**
+
+Suponga que una variable aleatoria discreta está definida por la siguiente función de distribución de probabilidad:
+
+| $x$    |   $0$  |  $1$   |  $2$   |
+|:-------|:-------|:-------|:-------|
+| $f(x)$ |  $1/3$ | $1/2$  | $1/6$  |
+
+
+```{r quiz_6}
+
+quiz(
+  question("No es correcto afirmar que:  ", 
+           correct = "Correcto!, E[X] = 0 * 1/3 + 1 * 1/2 + 2 * 1/6.", 
+           allow_retry = TRUE,
+           answer("E[X] = 1/2 + 1/6", correct = TRUE),
+           answer("V[X] = 1/2 + 9/6 - 25/36", message = "No...intentalo de nuevo!"),
+           answer("f(x), es una función de distribución de probabilidad", message = "Incorrecto. Intenta de nuevo!."),
+           answer("F(1) = 5/6", message = "No...intentalo de nuevo!"),
+           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+           submit_button = "Enviar respuesta",
+           try_again_button = "Intentar de nuevo"),
+  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+  caption = " "
+)
+
+```
+
+
+
+
+## **PROBLEMAS**
+
+
+### **Problema 1**
+
+Una variable aleatoria continua tiene como función de densidad de probabilidad $f(x) = 2(1+x)/27$ para valores $2 \leq x \leq 5$. 
+
+Determine:
+
+a. $P(X < 4)$
+b. $P(3 \leq X < 4)$
+
+
+```{r p1, exercise=TRUE, exercise.lines = 10}
+
+
+```
+
+
+```{r p1-hint}
+fx = function(x){2*(1+x)/27}
+integrate(fx, lower=2, upper=5) # verificación de  integral f(x) dx =1
+
+```
+
+
+```{r p1-solution}
+fx = function(x){2*(1+x)/27}
+integrate(fx, lower=2, upper=4) # P(X <4)
+integrate(fx, 3,4) # P(3 <= X < 4)
+```
+
+
+
+### **Problema 2**
+
+Sea X el número de solicitudes que recibe un sistema de ventas en linea sigue una distribución de probabilidad con función $f(x) = (\exp\{-2 \} \hspace{.3cm} 2^{x})/x!$. 
+
+Determine la probabilidad $P(0 \leq X \leq 5)$
+
+
+```{r p2, exercise=TRUE, exercise.lines = 10}
+fx=function(x){(exp(x)*2^x)/factorial(x)}
+
+```
+
+
+```{r p2-hint}
+fx=function(x){(exp(x)*2^x)/factorial(x)}
+x=0:5
+
+```
+
+
+```{r p2-solution}
+fx=function(x){
+                (exp(-2)*2^x)/factorial(x)
+               }
+sum(fx(0:5))
+```
+
+
+### **Problema 3**
+
+Para una variable aleatoria continua con función de probabilidad acumulada 
+
+$$
+\begin{equation}
+F(x) = \left\lbrace
+\begin{array}{ll}
+0 \hspace{1.0cm} \text{si } x <0 \\
+0.2x \hspace{.5cm} \text{si } 0 \leq x\leq 5 \\
+1 \hspace{1.0cm} \text{si } 5 \leq x \\
+\end{array}
+\right.
+\end{equation}
+$$ 
+
+Determinen el valor de 
+
+a. $P(X \leq 2.8)$
+b. $P(X > 1.5)$
+
+```{r p3, exercise=TRUE, exercise.lines = 10}
+
+
+```
+
+
+```{r p3-hint}
+0.2*2.8 # F(2.8) = P(X <= 2.8)
+
+```
+
+
+```{r p3-solution}
+0.2*2.8 # F(2.8) = P(X <= 2.8)
+1-(0.28*1.5)  #  1 - F(1.5) = 1 - P(X < 1.5) = P(X > 1.5)
+```
+
+
+
+### **Problema 4**
+
+Para la variable aleatoria contunua $X$  con función de densidad : $f(x) = 1/22 \hspace{.2cm}exp\{-x/22\}$, para $x > 0$ y cero en cualquier otro caso, determine su valor esperado y su varianza.
+
+**Nota**:
+
+$E[X] = \int_{-\infty}^{\infty} xf(x) dx$
+$V[X] = E[X^{2}] - E[X]^{2}$
+$E[X^{2}] = \int_{-\infty}^{\infty} x^{2}f(x) dx$
+
+
+```{r p4, exercise=TRUE, exercise.lines = 5}
+fx=function(x){1/22*exp(-x/22)}
+integrate(fx, 0, Inf) # verificación de f(x) es una función de densidad de probabilidad
+
+```
+
+
+```{r p4-hint}
+xfx=function(x){1/22*x*exp(-x/22)}
+x2fx=function(x){1/22*x^2*exp(-x/22)}
+Ex=integrate(xfx, 0, Inf) # valor espeado
+cat("E[X] = ", Ex$value, "\n")
+Ex2=integrate(x2fx, 0, Inf) 
+Vx=Ex2$value - Ex$value^2
+cat("V[X] = ", Vx)
+# varianza
+```
+
+
+```{r p4-solution}
+
+```
+
+
+
+### **Problema 5**
+
+Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
+   
+$$f(x,    y)=\left\{
+\begin{array}{cc}
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 , 0 \leq y \leq  1 \\
+&\\
+0 & \text{en cualquier otro caso} 
+\end{array}
+\right.$$
+
+
+Determine si $f_{_{XY}}(x,y)$ es una función de densidad de probabilidad conjunta
+
+
+**Nota**
+$$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y) \:dx \:dy  = 1$$
+
+
+
+
+```{r p5, exercise=TRUE, exercise.lines = 15}
+library(cubature) 
+
+```
+
+
+```{r p5-hint}
+library(cubature) 
+fxy <- function(x) { 2/3*(x[1] + 2*x[2])} # función de densidad conjunta
+
+```
+
+
+```{r p5-solution}
+library(cubature) 
+fxy <- function(x) { 2/3*(x[1] + 2*x[2])} # función de densidad conjunta
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(1, 1))# doble integral
+```
+
+
+
+### **Problema 6**
+
+Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
+   
+$$f(x,y)=\left\{
+\begin{array}{cc}
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 , 0 \leq y \leq  1 \\
+&\\
+0 & \text{en cualquier otro caso} 
+\end{array}
+\right.$$
+
+Determine $P(X \leq 0.5 ; Y \leq 0.3) $, $P(X \leq 0.80)$, $P(Y \geq 0.60)$
+	
+	
+
+
+```{r p6, exercise=TRUE, exercise.lines = 15}
+library(cubature) 
+
+```
+
+
+```{r p6-hint}
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+
+```
+
+
+```{r p6-solution}
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(0.5, 0.3))# doble integral
+```
+
+
+
+### **Problema 7**
+
+Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
+   
+$$f(x,y)=\left\{
+\begin{array}{cc}
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 ,\hspace{.3cm} 0 \leq y \leq  1 \\
+&\\
+0 & \text{en cualquier otro caso} 
+\end{array}
+\right.$$
+
+Determine $P(X<0.75; Y<0.75)$, interprete su resultado
+
+```{r p7, exercise=TRUE, exercise.lines = 15}
+
+
+```
+
+
+```{r p7-hint}
+fxy=function(x){2/3*(x+2*y)}
+
+
+
+```
+
+
+```{r p7-solution}
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(0.75, 0.750))
+```
+
+
+
+
+
+
+### **Problema 8**
+
+Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
+   
+$$f(x,y)=\left\{
+\begin{array}{cc}
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 ,\hspace{.3cm} 0 \leq y \leq  1 \\
+&\\
+0 & \text{en cualquier otro caso} 
+\end{array}
+\right.$$
+
+
+
+Represente gráficamente la función de densidad de probabilidad conjunta
+
+
+```{r p8, exercise=TRUE, exercise.lines = 15}
+
+
+```
+
+
+```{r p8-hint}
+x=seq(0,1,length=10)
+y=seq(0,1,length=10)
+fxy=function(x,y){3/2*(x^2+y^2)}
+z=outer(x, y, fxy)
+persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = "red",
+      xlab = "x", ylab ="y", zlab = "f(x,y)",
+      main=" ", col.main="blue")
+
+
+
+```
+
+
+
+
+

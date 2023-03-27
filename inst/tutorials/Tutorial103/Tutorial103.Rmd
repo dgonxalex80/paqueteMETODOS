@@ -1,0 +1,481 @@
+---
+title: "**VISUALIZACIÓN DE DATOS**"
+author: Métodos y Simulación Estadística
+output: 
+  learnr::tutorial:
+    css: css/learnr_metadocencia.css
+    progressive: true # los encabezados de tercer nivel (###) son revelados progresivamente
+    allow_skip: true # permite saltearse los ejercicios. 
+    language:
+      es: tutorial_es.json
+description: "Tutorial interactivo conceptos básicos de probabilidad" # Esta descripción se ve en el panel Tutorial de RStudio 
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE,
+                 exercise.warn_invisible = FALSE)
+# colores
+c1="#FF7F00" # NARANJA COLOR PRINCIPAL
+c2="#034a94" # AZUL FUERTE COLOR SECUNDARIO  
+c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO  
+c4="#686868" # GRIS COLOR TEXTO 
+
+```
+
+## **PRESENTACIÓN**
+
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+knitr::include_graphics("images/banner2.png")
+```
+
+El presente tutorial contiene preguntas relacionadas con , 
+conceptos importantes en 
+
+</br>
+
+#### **CONCEPTOS**
+
+Dependiendo de el tipo de variable y el tipo de escala se elige el tipo de gráfica a utilizar para la representación de la variable.
+
+
+|Tipo de variable | Tipos de escala  |  Tipo de gráfico            |  Sintaxis R            | 
+|:----------------|:-----------------|:----------------------------|:-----------------------|
+| cualitativa     | nominal          |  diagrama de torta          |  `pie(table(x))`       |
+|                 | ordinal          |  diagrama de barras         |  `barplot(table(x))`   |
+|cualitativa-cualitativa|            |  diag.barras dobles         |  `barplot(table(x,y))` |
+|cualitativa-cualitativa|            |  diag. mosaico              |  `plot(x,y)`           |
+
+</br>
+
+|                 |                  |                             |                        |
+|:----------------|:-----------------|:----------------------------|:-----------------------|
+|cuantitativa     | intervalo/ razón |  diagrama de tallos y hojas | `stem(x)`              |
+|                 | intervalo/ razón |  histograma                 | `hist(x)`              | 
+|                 | intervalo/ razón |  diagrama de puntos         | `plot(x,y)`            |
+|                 | intervalo/ razón |  diagrama de densidad       | `density(x)`           |
+|                 | intervalo/ razón |  diagrama de cajas          | `boxplot(x)`           |
+|                 | intervalo/ razón |  diagrama de linea          | `plot(x, type="l")`    |
+| cuantitativa-cuantitativa| intervalo/ razón| diagrama de dispersión| `plot(x,y)`                        |
+
+</br>
+
+**Nota**: Además de estas formas de representación gráfica existen otras formas que combinan variables como:
+
++ Mapas
++ Diagrama de Mosaico
++ Diagramas de radar
++ Diagrama likert
+
+</br></br>
+
+#### **MAPA** 
+
+
+```{r, echo=FALSE, , out.width="100%", fig.align = "center"}
+knitr::include_graphics("images/graficas.png")  
+
+```
+
+## **CUESTIONARIO**
+
+### **Pregunta 1**
+
+```{r quiz_1}
+
+quiz(
+question("La caja del diagrama de cajas y bigotes, representa: ", 
+correct = "Respuesta y explicación!, .", 
+allow_retry = TRUE,
+answer("El 50% de los valores al rededor de la media", message = "Cerca, pero no...intentalo de nuevo!"),
+answer("Todos los valores, menos los valores atípicos", message = "Nop...intentalo de nuevo!"),
+answer("Los valores comprendidos entre los cuartiles 25 y 75", message = "Incorrecto. Intenta de nuevo!."),
+answer("Ninguna de las anteriores", correct = TRUE),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = " "
+)
+
+```
+
+
+### **Pregunta 2**
+
+```{r quiz_2}
+
+quiz(
+question("La manera correcta de representar gráficamente la variable NIVEL DE SATISFACCIÓN POR SERVICIO DE ENVÍO  es:", 
+correct = "Correcto!,.El diagrama de barras es el diagrama adecuado para representar una variable cualitativa en escala ordinal.", 
+allow_retry = TRUE,
+answer("Un diagrama circular o diagrama de tortas", message = "No,...intentalo de nuevo!"),
+answer("Un diagrana de dispersión", message = "No...intentalo de nuevo!"),
+answer("Un histograma", message = "Incorrecto. Intenta de nuevo!."),
+answer("Un diagrama de barras", correct = TRUE),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = "Visualización"
+)
+
+```
+
+
+### **Pregunta 3**
+
+```{r quiz_3}
+
+quiz(
+question("Un histograma no debe ser empleado para  la representación de una variable como:", 
+correct = "Correcto!, El histograma construye intervalos que contiene los datos y permite encontrar aproximaciones de los indicadores, pero no sus valores precisos.", 
+allow_retry = TRUE,
+answer("El tiempo de duración de una llamada", message = "No...intentalo de nuevo!"),
+answer("El peso de un paquete", message = "No...intentalo de nuevo!"),
+answer("El tipo de defecto presentado una prenda de vestir", correct = TRUE),
+answer("El número de hijos de un hogar", message = "Incorrecto. Intenta de nuevo!."),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = "Visualización"
+)
+
+```
+
+### **Pregunta 4**
+
+El siguiente diagrama de tallos y hojas contiene información sobre el tiempo en segundos que tarda una respuesta a una solicitud electrónica que tiene como promedio 166.1 s.
+
+<pre>
+10 | 4
+12 | 34486899
+14 | 5659
+16 | 124588934566799
+18 | 1156822356
+20 | 56
+</pre>
+
+
+```{r quiz_4}
+
+quiz(
+question("Podemos con estra información afirmar:", 
+correct = "Correcto!, el rango es igual a 206 - 104 = 102 s.", 
+allow_retry = TRUE,
+answer("La mediana de los tiempos es 161", message = "No...intentalo de nuevo!"),
+answer("La media es 186", message = "No...intentalo de nuevo!"),
+answer("El rango es 102", correct = TRUE),
+answer("El valor mínimo es 10.4" , message = "Incorrecto. Intenta de nuevo!."),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = " "
+)
+
+```
+
+
+### **Pregunta 5**
+
+La siguiente gráfica de densidad, se presenta el tiempo de carrera registrado por un grupo de atletas en la carrera la Luz 2022
+
+
+```{r, echo=FALSE}
+library(paqueteMET)
+data("CarreraLuz22")
+x=CarreraLuz22$timerun/60
+par(mar = c(5, 4, 4, 1)+0.5)  # margenes de la gráfica
+plot(density(x), lwd=3, col="#0d3b66",
+main = "Distribución del tiempo de carrera",
+xlab="tiempo (min)",
+ylab = "densidad", las=1,
+cex.lab=1,  # tamaño de etiqueta ejes
+cex.axis=.8, # tamaño escalas de los ejes 
+cex.main=1, # tamaño del titulo
+cex.sub=1)    # tamaño del subtitulo)
+```
+
+
+```{r quiz_5}
+
+quiz(
+question("De la gráfica no se puede afirmar :", 
+correct = "Correto!, En presencia de datos atípicos la media presenta una desviación debido al aumento notorio de la suma de todos los valores. No ocurre lo mismo con la mediana es robuzta ante cambios en los extremos.", 
+allow_retry = TRUE,
+answer("Este diagráma permite visualizar el rango de tiempo con mayor concentración", message = "Cerca, pero no...intentalo de nuevo!"),
+answer("Existen muchos datos atípicos que hacen que la media sea el mejor indicador de centro", correct = TRUE),
+answer("El ganador registró un tiempo de carrera de aproximadamente 30 minutos", message = "Incorrecto. Intenta de nuevo!."),
+answer("La forma de la gráfica es simétrica con algunos datos atípicos" , message = "Nop...intentalo de nuevo!"),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = " "
+)
+
+```
+
+
+
+## **PROBLEMAS**
+
+
+### **Problema 1**
+
+El paquete  paqueteMET contiene la data inflacion que corresponde a la serie de tiempo de este indicador desde enero de 1993 a diciembre de 2022. Construya una gráfica de tiempo que de cuenta del comportamiento de esta variable para el periodo indicado.
+
+```{r p1, exercise=TRUE, exercise.lines = 10}
+data(paqueteMOD)
+data(inflacion2022)
+
+```
+
+
+```{r p1-hint}
+data(paqueteMOD)
+data(inflacion2022)
+y=ts(inflacion2022$inflacion, star=c(1993,1), end=c(2022,12), frequency=12)
+```
+
+
+```{r p1-solution}
+data(paqueteMOD)
+data(inflacion2022)
+y=ts(inflacion2022$inflacion, star=c(1993,1), end=c(2022,12), frequency=12)
+plot(y, type="l",
+main="Inflación Colombia  ene-1993 a dic -2022",
+ylab="inflación acumulada anual (%)",
+xlab = "meses", las=1,
+col="#ee964b", 
+lwd = 4)
+```
+
+
+
+### **Problema 2*
+
+Durante 5 meses se construyen 134 kilómetros de carretera en la siguiente forma: En el primer més, 3.60% del total del proyecto; en el segundo més un 7.60% del total; en el tercer més, el 15.3% del total; en el cuarto més 24.5% del total y en último més, el 49% restante.
+
+```{r p2, exercise=TRUE, exercise.lines = 10}
+
+
+```
+
+
+```{r p2-hint}
+mes= 1:4
+construccion=c(0.036,0.076,0.153,0.245,0.490)
+
+```
+
+
+```{r p2-solution}
+mes=1:5
+construccion=c(0.036,0.076,0.153,0.245,0.490)
+plot(mes,construccion)
+plot(y, type="l",
+     main=" ",
+     ylab=" ",
+     xlab = " ", las=1,
+     col="#ee964b", 
+     lwd = 4
+     )
+```
+
+
+### **Problema 3**
+
+Una consulta en tiendas en linea para memorias USB 128GB arrojó lo siguientes valores:
+
+<pre>
+        6 | 0 3 4
+        6 | 7 8 8 8
+        7 | 0 0 1 1 2 2 2 3 3 4 4
+        7 | 5 5 5 5 5 6 6 7 7 9
+        8 | 0 3 3 4
+        8 | 5 6 7 8 8 9 9
+        9 | 1
+</pre>
+
+```{r p3, exercise=TRUE, exercise.lines = 10}
+
+
+```
+
+
+```{r p3-hint}
+x=c(60, 63, 64, 67, 68, 68, 68, 70, 70, 71, 71, 72, 72, 72, 73, 73, 74, 74, 75, 75, 75, 75, 75, 76, 76, 77, 77, 79,
+80, 83, 83, 84, 85, 86, 87, 88, 88, 89, 89, 91)
+
+```
+
+
+```{r p3-solution}
+
+x=c(60, 63, 64, 67, 68, 68, 68, 70, 70, 71, 71, 72, 72, 72, 73, 73, 74, 74, 75, 75, 75, 75, 75, 76, 76, 77, 77, 79,
+    80, 83, 83, 84, 85, 86, 87, 88, 88, 89, 89, 91)
+boxplot(x, las=1,
+        main=" ",
+        ylab=" ",
+        xlab = " ",
+        col="#ee964b")
+grid()
+```
+
+
+
+<!-- ### **Problema 4** -->
+
+<!-- Enunciado -->
+
+<!-- ```{r p4, exercise=TRUE, exercise.lines = 5} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p4-hint} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p4-solution} -->
+
+<!-- ``` -->
+
+
+
+<!-- ### **Problema 5** -->
+
+<!-- Enunciado -->
+
+<!-- ```{r p5, exercise=TRUE, exercise.lines = 5} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p5-hint} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p5-solution} -->
+
+<!-- ``` -->
+
+
+
+<!-- ### **Problema 6** -->
+<!-- Enunciado -->
+
+<!-- ```{r p6, exercise=TRUE, exercise.lines = 5} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p6-hint} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p6-solution} -->
+
+<!-- ``` -->
+
+
+
+<!-- ### **Problema 7** -->
+
+<!-- Enunciado -->
+
+<!-- ```{r p7, exercise=TRUE, exercise.lines = 5} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p7-hint} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p7-solution} -->
+
+<!-- ``` -->
+
+
+
+<!-- ### **Problema 8** -->
+
+<!-- Enunciado -->
+
+<!-- ```{r p8, exercise=TRUE, exercise.lines = 5} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p8-hint} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p8-solution} -->
+
+<!-- ``` -->
+
+
+
+<!-- ### **Problema 9** -->
+
+<!-- Enunciado -->
+
+<!-- ```{r p9, exercise=TRUE, exercise.lines = 5} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p9-hint} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p9-solution} -->
+
+<!-- ``` -->
+
+
+
+<!-- ### **Problema 10** -->
+
+<!-- Enunciado -->
+
+<!-- ```{r p10, exercise=TRUE, exercise.lines = 5} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p10-hint} -->
+
+
+<!-- ``` -->
+
+
+<!-- ```{r p10-solution} -->
+
+<!-- ``` -->
+
