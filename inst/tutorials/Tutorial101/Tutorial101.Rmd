@@ -23,7 +23,8 @@ c1="#FF7F00" # NARANJA COLOR PRINCIPAL
 c2="#034a94" # AZUL FUERTE COLOR SECUNDARIO  
 c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO  
 c4="#686868" # GRIS COLOR TEXTO 
-
+# install.packages("devtools") # solo una vez
+# devtools::install_github("dgonxalex80/paqueteMETODOS")
 ```
 
 # **PRESENTACIÓN**
@@ -361,7 +362,7 @@ Calcule los indicadores de centro para el tiempo de carrera de todos los partici
 **Nota**: para cargar la data se requiere descargar y activar el paquete `paqueteMET` y la función `data(CarreraLuz22)`
 
 ```{r p1, exercise=TRUE, exercise.lines = 10}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
@@ -403,7 +404,7 @@ El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atl
 Se requiere saber si en promedio los hombre de la categoria `3. Veteranos A` registraron menor tiempo que las mujeres en la categoria `2. Abierta` 
 
 ```{r p2, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
@@ -419,7 +420,7 @@ data2=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer" & CarreraLuz22$categoria=="
 
 
 ```{r p2-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 data1=subset(CarreraLuz22, CarreraLuz22$sex=="Hombre" & CarreraLuz22$categoria=="3. Veteranos A")
 data2=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer" & CarreraLuz22$categoria=="2. Abierta")
@@ -443,14 +444,14 @@ Determine si la distribución de las edades de los atletas mujeres es simetrica
 
 
 ```{r p3, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
 
 
 ```{r p3-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 data2=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
 
@@ -458,7 +459,7 @@ data2=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
 
 
 ```{r p3-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 data3=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
 # forma 1 : si la media y la mediana son similares, entonces la forma es simetrica
@@ -488,14 +489,14 @@ El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atl
 Ahora se requiere calcular las medias para todas las categoria en hombre y en mujeres
 
 ```{r p4, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
 
 
 ```{r p4-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 data4M=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
 data4H=subset(CarreraLuz22, CarreraLuz22$sex=="Hombre")
@@ -504,7 +505,7 @@ data4H=subset(CarreraLuz22, CarreraLuz22$sex=="Hombre")
 
 
 ```{r p4-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 library(stats)
 data("CarreraLuz22")
 data4M=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
@@ -541,14 +542,14 @@ Que diferencias existe entre las funciones:
 
 
 ```{r p5, exercise=TRUE, exercise.lines = 5}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
 
 
 ```{r p5-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 x=CarreraLuz22$edad
 summary(x)                
@@ -557,7 +558,7 @@ summary(x)
 
 
 ```{r p5-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 x=CarreraLuz22$edad
 summary(x)                # resumen rapido de indicadores, no incluye indicadores de dispersión

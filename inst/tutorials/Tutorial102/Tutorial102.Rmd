@@ -274,21 +274,21 @@ El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atl
 Construya una tabla que permita  el análisis de la variable categoria por sexo
 
 ```{r p1, exercise=TRUE, exercise.lines = 5}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
 
 
 ```{r p1-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 table()
 ```
 
 
 ```{r p1-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 table(CarreraLuz22$categoria, CarreraLuz22$sex)
 ```
@@ -309,14 +309,14 @@ El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atl
 Qué porcentaje de las mujeres conforman  la categoría Abierta?
 
 ```{r p2, exercise=TRUE, exercise.lines = 5}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
 
 
 ```{r p2-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 table(CarreraLuz22$categoria, CarreraLuz22$sex)
 ```
@@ -324,7 +324,7 @@ table(CarreraLuz22$categoria, CarreraLuz22$sex)
 
 ```{r p2-solution}
 library(tidyverse)
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 table(CarreraLuz22$categoria, CarreraLuz22$sex) %>% 
   prop.table(.,2)
@@ -356,14 +356,14 @@ Verifique que las categorías cumplen estos rangos
 
 
 ```{r p3, exercise=TRUE, exercise.lines = 5}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
 
 
 ```{r p3-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 breaks=c(10,18,40,50,60,80)    # limites de intervalos
 Edad.corredores=cut(CarreraLuz22$edad, breaks)
@@ -372,7 +372,7 @@ table(Edad.corredores, CarreraLuz22$categoria)
 
 
 ```{r p3-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 ```
 
@@ -383,14 +383,14 @@ data("CarreraLuz22")
 Ahora se requiere que construya una tabla con los tiempos en minutos por rangos de 15 minutos ( (30 a 60); [60 a 90); [90 a 120 ), [120 a 150); [150 a 180] )
 
 ```{r p4, exercise=TRUE, exercise.lines = 5}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 
 ```
 
 
 ```{r p4-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 breaks=c( )     # limites de intervalos
 tiempos.R=cut(CarreraLuz22$timerun/60, breaks)
 table()
@@ -398,7 +398,7 @@ table()
 
 
 ```{r p4-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 breaks=c(30,59.9,89.9,119.9,149.9,180 )     # limites de intervalos
 tiempos.R=cut(CarreraLuz22$timerun/60 , breaks)
 summarytools::freq(tiempos.R)

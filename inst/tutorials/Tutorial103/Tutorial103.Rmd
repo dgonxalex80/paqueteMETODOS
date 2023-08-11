@@ -229,7 +229,7 @@ caption = " "
 El paquete  paqueteMET contiene la data inflacion que corresponde a la serie de tiempo de este indicador desde enero de 1993 a diciembre de 2022. Construya una gráfica de tiempo que de cuenta del comportamiento de esta variable para el periodo indicado.
 
 ```{r p1, exercise=TRUE, exercise.lines = 10}
-data(paqueteMOD)
+data(paqueteMETODOS)
 data(inflacion2022)
 
 ```
