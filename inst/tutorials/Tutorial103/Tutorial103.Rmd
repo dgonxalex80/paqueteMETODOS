@@ -22,6 +22,8 @@ c2="#034a94" # AZUL FUERTE COLOR SECUNDARIO
 c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO  
 c4="#686868" # GRIS COLOR TEXTO 
 
+# install.packages("devtools") # solo una vez
+# devtools::install_github("dgonxalex80/paqueteMETODOS")
 ```
 
 ## **PRESENTACIÓN**
@@ -79,7 +81,7 @@ knitr::include_graphics("images/graficas.png")
 ```
 
 ## **CUESTIONARIO**
-
+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
 ### **Pregunta 1**
 
 ```{r quiz_1}
@@ -236,14 +238,14 @@ data(inflacion2022)
 
 
 ```{r p1-hint}
-data(paqueteMOD)
+data(paqueteMETODOS)
 data(inflacion2022)
 y=ts(inflacion2022$inflacion, star=c(1993,1), end=c(2022,12), frequency=12)
 ```
 
 
 ```{r p1-solution}
-data(paqueteMOD)
+data(paqueteMETODOS)
 data(inflacion2022)
 y=ts(inflacion2022$inflacion, star=c(1993,1), end=c(2022,12), frequency=12)
 plot(y, type="l",
