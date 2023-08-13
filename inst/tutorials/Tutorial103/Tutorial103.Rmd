@@ -187,7 +187,7 @@ La siguiente gráfica de densidad, se presenta el tiempo de carrera registrado p
 
 
 ```{r, echo=FALSE}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 x=CarreraLuz22$timerun/60
 par(mar = c(5, 4, 4, 1)+0.5)  # margenes de la gráfica

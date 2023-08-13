@@ -514,14 +514,14 @@ $H_1 : X$ es una variable aleatoria
 
 
 ```{r p6, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 library(randtests)
 data("CarreraLuz22")
 ```
 
 
 ```{r p6-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 library(randtests)
 data("CarreraLuz22")
 x=sample(CarreraLuz22$sex, 100)
@@ -531,7 +531,7 @@ rachas<-as.numeric(x=="Hombre")
 
 
 ```{r p6-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 library(randtests)
 data("CarreraLuz22")
 x=sample(CarreraLuz22$sex, 100)

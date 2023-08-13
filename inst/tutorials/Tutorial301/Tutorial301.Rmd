@@ -248,7 +248,7 @@ data("arboles")
 
 
 ```{r p1-hint}
-library(paqueteMOD)
+library(paqueteMETODOS)
 data("arboles")
 cor(,)
 
@@ -256,7 +256,7 @@ cor(,)
 
 
 ```{r p1-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("arboles")
 cor(arboles$peso,arboles$diametro)
 cor(arboles$peso,arboles$altura)
@@ -270,14 +270,14 @@ Realice las pruebas de hipótesis con las que pueda verificar si las correlacion
 
 
 ```{r p2, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("arboles")
 
 ```
 
 
 ```{r p2-hint}
-library(paqueteMOD)
+library(paqueteMETODOS)
 data("arboles")
 cor.test()
 
@@ -285,7 +285,7 @@ cor.test()
 
 
 ```{r p2-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("arboles")
 arboles=as.data.frame(arboles)
 cor.test(arboles$peso,arboles$diametro)
@@ -305,14 +305,14 @@ Contruya las siguientes dataset que cumpla con la siguientes condiciones:
 * casasSUR56 : solo casas ubicadas en el sur de la ciudad, pertenecientes a los estratos 5 y 6
 
 ```{r p3, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 
 ```
 
 
 ```{r p3-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 casas = subset(vivienda, vivienda$tipo == "Casa")
 
@@ -320,7 +320,7 @@ casas = subset(vivienda, vivienda$tipo == "Casa")
 
 
 ```{r p3-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 casas = subset(vivienda, vivienda$tipo == "Casa")
 casaSUR = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur")
@@ -339,7 +339,7 @@ Para las casas ubicadas en el sur de la ciudad que pertenecen al estrato 5 y 6, 
 
 
 ```{r p4, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 
 
@@ -347,7 +347,7 @@ data("vivienda")
 
 
 ```{r p4-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
 
@@ -355,7 +355,7 @@ casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Su
 
 
 ```{r p4-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
 GGally::ggpairs(casaSUR56[,5:9], title="Casas, ubicación sur, estratos 5 y 6") 
@@ -374,7 +374,7 @@ visualiza su relación con las variables : `areaconst`,  `parqueaderos`, `banios
 
 
 ```{r p5, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 
 
@@ -382,7 +382,7 @@ data("vivienda")
 
 
 ```{r p5-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
 
@@ -390,7 +390,7 @@ casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Su
 
 
 ```{r p5-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
 casaSUR56$lnpreciom = log(casaSUR56$preciom)
