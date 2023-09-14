@@ -325,6 +325,8 @@ data("vivienda")
 casas = subset(vivienda, vivienda$tipo == "Casa")
 casaSUR = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur")
 casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
+head(casaSUR)
+head(casaSUR56)
 ```
 
 

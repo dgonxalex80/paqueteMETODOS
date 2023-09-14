@@ -185,12 +185,12 @@ quiz(
 ```{r quiz_3}
 
 quiz(
-  question("Del método de estimación MCO  no es posible afirmar que", 
+  question("Del método de estimación MCO  no es posible afirmar que :", 
            correct = "Correcto!, el método de MCO es un método de optimización matemático que encuentra los valores de los parámetros que minimicen los residuales, sin importar la relación existente entre las variables X y Y.", 
            allow_retry = TRUE,
            answer("Las estimaciones de los parámetros son insesgadas", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("Las estimaciones son las mismasa que se encuentran por el método de máxima verosimilitud", message = "Nop...intentalo de nuevo!"),
-           answer("Son validos siempre y cuando se cumplan los supuestos sobre los errores", message = "Incorrecto. Intenta de nuevo!."),
+           answer("Las estimaciones son las mismas que se encuentran por el método de máxima verosimilitud", message = "Nop...intentalo de nuevo!"),
+           answer("Las estimaciones de los coeficientes son validas siempre y cuando se cumplan los supuestos sobre los errores", message = "Incorrecto. Intenta de nuevo!."),
            answer("Si los datos no tienen una forma lineal, el método de MCO no puede encontrar valores estimados para el intercepto y la pendiente de la linea de regresión", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
@@ -214,12 +214,12 @@ Al evaluar la forma funcional del modelo empleando la transformación Box-Cox, a
 
 quiz(
   question("El resultado indica que la mejor transformación de la variable respuesta es: ", 
-           correct = "Correcto!", 
+           correct = "Correcto! como se indica en el apartado de Experiencia/Transformaciones", 
            allow_retry = TRUE,
            answer("Inverso del cuadrado de Y", message = "Cerca, pero no...intentalo de nuevo!"),
            answer("Inverso de la raiz cuadrada de  Y", message = "Nop...intentalo de nuevo!"),
-           answer("La raiz cuadrada de Y", message = "Incorrecto. Intenta de nuevo!."),
-           answer("El cuadro de Y", correct = TRUE),
+           answer("La raiz cuadrada de Y", correct = TRUE),
+           answer("El cuadro de Y", message = "Incorrecto. Intenta de nuevo!."),  
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -235,7 +235,7 @@ quiz(
 ```{r quiz_5}
 
 quiz(
-  question("No es un supuesto del modelo de regresión lineal", 
+  question("No es un supuesto del modelo de regresión lineal simple", 
            correct = "Correcto!, aunque la varianza debe ser constante, no necesariamente será igual a uno.", 
            allow_retry = TRUE,
            answer("Valor esperado de los errores  igual a cero", message = "Cerca, pero no...intentalo de nuevo!"),
@@ -293,7 +293,7 @@ A partir de la data `biomasa` contenida en `paqueteMOD` contiene información so
 * $E[\varepsilon] = 0$
 
 ```{r p2, exercise=TRUE, exercise.lines = 20}
-library(paqueteMET)
+library(paqueteMETODOS)
 library(lmtest)
 data(biomasa)
 
@@ -417,7 +417,7 @@ casas = subset(vivienda, vivienda$tipo == "Casa")
 
 
 ```{r p5-solution}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("vivienda")
 casas = subset(vivienda, vivienda$tipo == "Casa")
 casaSUR = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur")
