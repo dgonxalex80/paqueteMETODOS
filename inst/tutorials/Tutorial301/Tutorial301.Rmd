@@ -14,7 +14,7 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
-library(paqueteMET)
+library(paqueteMETODOS)
 library(learnr)
 library(ggplot2)
 knitr::opts_chunk$set(echo = FALSE,
@@ -41,7 +41,7 @@ y<- rho*x + sqrt(1-rho^2)*z
 result <-cbind(y,x)
 return(result)
 }
-library(paqueteMOD)
+library(paqueteMETODOS)
 data("arboles")
 ##  <div class="content-box-blue">    </div> ## caja azul
 ```
@@ -174,7 +174,7 @@ quiz(
            answer("Del valor esperado de X, E[X]", message = "No...intentalo de nuevo!"),
            answer("Del valor esperado de Y, E[Y]", message = "No...intentalo de nuevo!"),
            answer("De la varianza de X por la varianza de Y, V[X]V[Y]", message = "Incorrecto. Intenta de nuevo!."),
-           answer("Del valor esperado conjunto de X y Y , E[XY] ", correct = TRUE),
+           answer("Del valor de la covarianza entre las variables X y Y , Cov[XY] ", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -241,7 +241,7 @@ quiz(
 Para el grupo de datos contenidos en la base arboles (data(arboles))  determine que variable (altura o diametro) tiene más relación con la variable peso. 
 
 ```{r p1, exercise=TRUE, exercise.lines = 15}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("arboles")
 
 ```
