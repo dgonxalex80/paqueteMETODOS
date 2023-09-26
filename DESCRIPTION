@@ -13,7 +13,7 @@ Depends:
     R (>= 3.6.0),
     cubature,
     GGally,
-     MASS,   
+    MASS,   
     summarytools,
     psych,
     tidyverse
