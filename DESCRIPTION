@@ -14,6 +14,7 @@ Depends:
     cubature,
     GGally,
     MASS,   
+    stats,
     summarytools,
     psych,
     tidyverse
