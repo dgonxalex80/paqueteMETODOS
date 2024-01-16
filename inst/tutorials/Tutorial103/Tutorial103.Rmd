@@ -81,7 +81,7 @@ knitr::include_graphics("images/graficas.png")
 ```
 
 ## **CUESTIONARIO**
-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
+
 ### **Pregunta 1**
 
 ```{r quiz_1}
@@ -228,7 +228,7 @@ caption = " "
 
 ### **Problema 1**
 
-El paquete  paqueteMET contiene la data inflacion que corresponde a la serie de tiempo de este indicador desde enero de 1993 a diciembre de 2022. Construya una gráfica de tiempo que de cuenta del comportamiento de esta variable para el periodo indicado.
+El paquete  `paqueteMETODOS` contiene la data inflacion que corresponde a la serie de tiempo de este indicador desde enero de 1993 a diciembre de 2022. Construya una gráfica de tiempo que de cuenta del comportamiento de esta variable para el periodo indicado.
 
 ```{r p1, exercise=TRUE, exercise.lines = 10}
 data(paqueteMETODOS)

@@ -341,7 +341,7 @@ quiz(
 
 ### **Problema 1**
 
-El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+El paquete `paqueteMETODOS` contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
 
 |id    |sex      |edad  |origen    |timerun  |categoria           |nacionalidad  |
 |:-----|:--------|:-----|:---------|:--------|:-------------------|:-------------|
@@ -382,7 +382,7 @@ mean(x, 0.10)
 
 ```{r p1-solution}
 # Indicadores de centro
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 x=CarreraLuz22$timerun/60
 mean(x)            # media
@@ -394,7 +394,7 @@ mean(x, 0.10)      # media truncada
 
 ### **Problema 2**
 
-El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+El paquete `paqueteMETODOS` contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
 
 * **sex** : sexo del atleta : Hombre, Mujer 
 * **edad**: edad en años del atleta
@@ -413,7 +413,7 @@ data("CarreraLuz22")
 
 
 ```{r p2-hint}
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 data1=subset(CarreraLuz22, CarreraLuz22$sex=="Hombre" & CarreraLuz22$categoria=="3. Veteranos A")
 data2=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer" & CarreraLuz22$categoria=="2. Abierta")
@@ -433,7 +433,7 @@ mean(data2$timerun/60)
 
 ### **Problema 3**
 
-El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+El paquete `paqueteMETODOS` contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
 
 * **sex** : sexo del atleta : Hombre, Mujer 
 * **edad**: edad en años del atleta
@@ -479,7 +479,7 @@ rapportools::skewness(data3$edad, na.rm = TRUE)
 
 ### **Problema 4**
 
-El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+El paquete `paqueteMETODOS` contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
 
 * **sex** : sexo del atleta : Hombre, Mujer 
 * **edad**: edad en años del atleta
@@ -526,7 +526,7 @@ tH
 
 ### **Problema 5**
 
-El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+El paquete `paqueteMETODOS` contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
 
 * **sex** : sexo del atleta : Hombre, Mujer 
 * **edad**: edad en años del atleta

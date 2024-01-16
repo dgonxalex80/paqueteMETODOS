@@ -136,7 +136,7 @@ quiz(
 ```
 
 
-### **Pregunta 2**Untitled
+### **Pregunta 2**
 
 la siguiente tabla resume los datos recogidos en una encuesta sobre calidad de vida. El estudio recogió información de 900 personas sobre:
 
@@ -265,7 +265,7 @@ quiz(
 
 ### **Problema 1**
 
-El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+El paquete `paqueteMETODOS` contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
 
 * **sex** : sexo del atleta : Hombre, Mujer 
 * **edad**: edad en años del atleta
@@ -300,7 +300,7 @@ table(CarreraLuz22$categoria, CarreraLuz22$sex)
 
 ### **Problema 2*
 
-El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+El paquete `paqueteMETODOS` contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
 
 * **sex** : sexo del atleta : Hombre, Mujer 
 * **edad**: edad en años del atleta
@@ -337,7 +337,7 @@ table(CarreraLuz22$categoria, CarreraLuz22$sex) %>%
 
 ### **Problema 3**
 
-El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+El paquete `paqueteMETODOS` contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
 
 * **sex** : sexo del atleta : Hombre, Mujer 
 * **edad**: edad en años del atleta

@@ -393,7 +393,7 @@ plot(modelo)
 
 ### **Problema 5**
 
-La base de datos `vivienda`  contenida en `paqueteMET` contiene las siguientes variables: id, zona, piso, estrato, preciom, areaconst,  parqueaderos, banios, habitaciones, tipo,  barrio, longitud, latitud 
+La base de datos `vivienda`  contenida en `paqueteMETODOS` contiene las siguientes variables: id, zona, piso, estrato, preciom, areaconst,  parqueaderos, banios, habitaciones, tipo,  barrio, longitud, latitud 
 
 Contruya las siguientes dataset que cumpla con la siguientes condiciones:
 
