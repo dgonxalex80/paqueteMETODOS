@@ -3,7 +3,6 @@
 \docType{data}
 \name{CarreraLuz22}
 \alias{CarreraLuz22}
-\docType{data}
 \title{CarreraLuz22}
 \format{
   A data frame with 1922 observations on the following 7 variables.
@@ -18,13 +17,13 @@
   }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+base de datos on informacion de las caracteristicas de los atletas participantes en la carrera La Lz 2022 en Cali
 }
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
+datos recogidos de la web de la carrera
 }
 \references{
-%%  ~~ possibly secondary sources and usages ~~
+datos recogidos de la web de la carrera
 }
 \examples{
 data(CarreraLuz22)

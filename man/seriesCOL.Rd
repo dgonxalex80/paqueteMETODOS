@@ -3,7 +3,6 @@
 \docType{data}
 \name{seriesCOL}
 \alias{seriesCOL}
-\docType{data}
 \title{seriesCOL}
 \format{
   A data frame with 74 observations on the following 3 variables.
@@ -14,13 +13,13 @@
   }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+series historicas  de la inflación y la tasa de cambio de Colombia
 }
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
+banco de republica de colombia
 }
 \references{
-%%  ~~ possibly secondary sources and usages ~~
+web del banco de la republica
 }
 \examples{
 data(seriesCOL)

@@ -3,7 +3,6 @@
 \docType{data}
 \name{rotacionNA}
 \alias{rotacionNA}
-\docType{data}
 \title{rotacionNA}
 \format{
   A data frame with 1470 observations on the following 25 variables.
@@ -36,13 +35,13 @@
   }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+base de datos rotacion de empleados 
 }
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
+datos sinteticos
 }
 \references{
-%%  ~~ possibly secondary sources and usages ~~
+datos simulados
 }
 \examples{
 data(rotacionNA)
