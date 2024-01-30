@@ -15,12 +15,9 @@ Depends:
     flextable,
     lmtest,
     MASS,  
-    normtest,
-    nortest,
-    stats,
     summarytools,
     psych,
     randtests,
     rapportools,
-    tidyverse
+    dplyr
 

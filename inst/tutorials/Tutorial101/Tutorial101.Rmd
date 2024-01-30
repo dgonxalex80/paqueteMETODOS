@@ -25,8 +25,6 @@ c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO
 c4="#686868" # GRIS COLOR TEXTO 
 # install.packages("devtools") # solo una vez
 # devtools::install_github("dgonxalex80/paqueteMETODOS")
-library(summarytools)
-library(psych)
 ```
 
 # **PRESENTACIÓN**

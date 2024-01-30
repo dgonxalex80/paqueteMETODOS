@@ -22,8 +22,8 @@ c1="#FF7F00" # NARANJA COLOR PRINCIPAL
 c2="#034a94" # AZUL FUERTE COLOR SECUNDARIO  
 c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO  
 c4="#686868" # GRIS COLOR TEXTO 
-library(normtest)
-library(nortest)
+# library(normtest)
+# library(nortest)
 library(randtests)
 ```
 
@@ -488,14 +488,14 @@ x=rnorm(200,1000,50)
 x=rnorm(200,1000,50)
 shapiro.test(x)
 # install.packages("normtets")
-library(normtest) # paquete de pruebas de normalidad
-jb.norm.test(x)  # Test de normalidad de Jarque-Bera
-kurtosis.norm.test(x) # Test de curtosis normal
-skewness.norm.test(x)  # test de sesgo normal
+# library(normtest) # paquete de pruebas de normalidad
+# jb.norm.test(x)  # Test de normalidad de Jarque-Bera
+# kurtosis.norm.test(x) # Test de curtosis normal
+# skewness.norm.test(x)  # test de sesgo normal
 
 # install.packages("nortets")
- library(nortest)
-lillie.test(x)  # test de Kolmogorof-Smirnov
+# library(nortest)
+# lillie.test(x)  # test de Kolmogorof-Smirnov
 ```
 
 
