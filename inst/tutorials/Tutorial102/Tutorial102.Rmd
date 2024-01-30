@@ -173,7 +173,7 @@ La siguiente información corresponde a la distribución de los atletas que part
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(paqueteMET)
-library(tidyverse)
+library(dplys)
 data("CarreraLuz22")
 # install.packages("flextable")
 library(flextable)
@@ -326,7 +326,7 @@ table(CarreraLuz22$categoria, CarreraLuz22$sex)
 
 
 ```{r p2-solution}
-library(tidyverse)
+library(dplyr)
 library(paqueteMETODOS)
 data("CarreraLuz22")
 table(CarreraLuz22$categoria, CarreraLuz22$sex) %>% 

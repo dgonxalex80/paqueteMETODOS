@@ -121,7 +121,7 @@ x=runif(1000,10,20)
 
 
 ```{r p1-hint}
-library(tidyverse)
+library(dplyr)
 x = runif(1000,10,20)
 density(x) 
 
@@ -129,7 +129,7 @@ density(x)
 
 
 ```{r p1-solution}
-library(tidyverse)
+library(dplyr)
 x = runif(1000,10,20)
 density(x) %>% 
   plot(., main = "Distribución unif(10,20")
@@ -353,7 +353,7 @@ A=apply(xy, 1,prod)
 
 
 ```{r p8-solution}
-library(tidyverse)
+library(dplyr)
 
 
 n=1000

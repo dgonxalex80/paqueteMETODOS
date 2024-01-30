@@ -12,10 +12,15 @@ LazyData: true
 Depends: 
     R (>= 3.6.0),
     cubature,
-    GGally,
-    MASS,   
+    flextable,
+    lmtest,
+    MASS,  
+    normtest,
+    nortest,
     stats,
     summarytools,
     psych,
+    randtests,
+    rapportools,
     tidyverse
 

@@ -6,6 +6,7 @@
 #' @export intervalo.var
 #' @importFrom  stats  qchisq var
 #' @examples intervalo.var(c(3,4,3,2,3,4,5),0.95)
+#' @importFrom stats qchisq var
 # '
 
 intervalo.var=function(x,niv.conf=0.95){

@@ -1,1 +1,16 @@
 exportPattern("^[[:alpha:]]+")
+importFrom(MASS, boxcox)
+importFrom(psych, describe)
+importFrom(summarytools, descr, freq)
+importFrom(normtest, jb.norm.test, kurtosis.norm.test)
+importFrom(nortest, lillie.test)
+importFrom(randtests, runs.test)
+importFrom(cubature, adaptIntegrate)
+importFrom(rapportools, skewness)
+importFrom(flextable, flextable)
+importFrom(lmtest, gqtest, dwtest)
+importFrom(stats, qchisq, var)
+import(tidyverse)
+
+
+

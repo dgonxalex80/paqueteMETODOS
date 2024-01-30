@@ -508,7 +508,6 @@ data4H=subset(CarreraLuz22, CarreraLuz22$sex=="Hombre")
 
 ```{r p4-solution}
 library(paqueteMETODOS)
-library(stats)
 data("CarreraLuz22")
 data4M=subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
 data4H=subset(CarreraLuz22, CarreraLuz22$sex=="Hombre")
