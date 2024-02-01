@@ -149,7 +149,7 @@ caption = "Visualización"
 
 ### **Pregunta 4**
 
-El siguiente diagrama de tallos y hojas contiene información sobre el tiempo en segundos que tarda una respuesta a una solicitud electrónica que tiene como promedio 166.1 s.
+El siguiente diagrama de tallos y hojas contiene información sobre el tiempo en segundos que tarda una respuesta a una solicitud electrónica que tiene como promedio 166 s (aproximación a enteros de  165.65).
 
 <pre>
 10 | 4
