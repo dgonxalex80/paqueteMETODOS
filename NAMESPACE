@@ -8,6 +8,7 @@ importFrom(rapportools, skewness)
 importFrom(flextable, flextable)
 importFrom(lmtest, gqtest, dwtest)
 importFrom(stats, qchisq, var)
+importFrom(ggplot2, ggplot) 
 import(dplyr)
 
 

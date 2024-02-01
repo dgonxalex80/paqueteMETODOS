@@ -6,27 +6,21 @@
 \title{CarreraLuz22}
 \format{
   A data frame with 1922 observations on the following 7 variables.
-  \describe{
-    \item{\code{id}}{a numeric vector}
-    \item{\code{sex}}{a character vector}
-    \item{\code{edad}}{a numeric vector}
-    \item{\code{origen}}{a character vector}
-    \item{\code{timerun}}{a numeric vector}
-    \item{\code{categoria}}{a character vector}
-    \item{\code{nacionalidad}}{a character vector}
-  }
+}
+\description{
+  Base de datos con información de las características de los atletas participantes en la carrera La Luz 2022 en Cali.
 }
 \details{
-base de datos on informacion de las caracteristicas de los atletas participantes en la carrera La Lz 2022 en Cali
+  Datos recogidos de la web de la carrera.
 }
 \source{
-datos recogidos de la web de la carrera
+  Datos recogidos de la web de la carrera.
 }
 \references{
-datos recogidos de la web de la carrera
+  Datos recogidos de la web de la carrera.
 }
 \examples{
-data(CarreraLuz22)
-## maybe str(CarreraLuz22) ; plot(CarreraLuz22) ...
+  data(CarreraLuz22)
+  ## maybe str(CarreraLuz22) ; plot(CarreraLuz22) ...
 }
 \keyword{datasets}
