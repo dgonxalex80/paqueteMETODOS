@@ -355,7 +355,6 @@ A=apply(xy, 1,prod)
 ```{r p8-solution}
 library(dplyr)
 
-
 n=1000
 x = rnorm(n, 2,0.1)   # simulación de 1000 longitudes
 y = rnorm(n,3, 0.2)   # simulación de 1000 anchos

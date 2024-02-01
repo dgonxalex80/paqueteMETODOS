@@ -14,7 +14,6 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
-library(dplyr)
 knitr::opts_chunk$set(echo = FALSE,
                  exercise.warn_invisible = FALSE)
 # colores
@@ -173,7 +172,7 @@ La siguiente información corresponde a la distribución de los atletas que part
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(paqueteMETODOS)
-library(dplys)
+library(dplyr)
 data("CarreraLuz22")
 # install.packages("flextable")
 library(flextable)
