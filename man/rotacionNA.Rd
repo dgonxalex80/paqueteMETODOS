@@ -4,6 +4,8 @@
 \name{rotacionNA}
 \alias{rotacionNA}
 \title{rotacionNA}
+\description{
+   Esta base de datos contiene los datos de 1470 empleados }
 \format{
   data.frame: A data frame with 1470 observations on the following 25 variables.
   \describe{

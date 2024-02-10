@@ -4,6 +4,8 @@
 \name{seriesCOL}
 \alias{seriesCOL}
 \title{seriesCOL}
+\description{
+   Esta base de datos contiene las series de tiemo de la tasa de inflacion y la tasa de cambio de colombia para los ultimos 74 años}
 \format{
   data.frame: A data frame with 74 observations on the following 3 variables.
   \describe{
