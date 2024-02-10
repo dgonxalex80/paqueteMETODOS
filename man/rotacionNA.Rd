@@ -5,7 +5,7 @@
 \alias{rotacionNA}
 \title{rotacionNA}
 \format{
-  A data frame with 1470 observations on the following 25 variables.
+  data.frame: A data frame with 1470 observations on the following 25 variables.
   \describe{
     \item{\code{id}}{a numeric vector}
     \item{\code{Rotación}}{a character vector}

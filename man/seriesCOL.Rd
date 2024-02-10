@@ -5,7 +5,7 @@
 \alias{seriesCOL}
 \title{seriesCOL}
 \format{
-  A data frame with 74 observations on the following 3 variables.
+  data.frame: A data frame with 74 observations on the following 3 variables.
   \describe{
     \item{\code{year}}{a numeric vector}
     \item{\code{INF}}{a numeric vector}

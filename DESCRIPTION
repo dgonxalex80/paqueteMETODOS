@@ -12,13 +12,14 @@ LazyData: true
 Depends: 
     R (>= 3.6.0),
     cubature,
+    dplyr,
     flextable,
     ggplot2,
     lmtest,
     MASS,  
-    summarytools,
     psych,
+    summarytools,
     randtests,
-    rapportools,
-    dplyr
+    rapportools
+    
 
