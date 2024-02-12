@@ -1,6 +1,6 @@
 Package: paqueteMETODOS
 Type: Package
-Title: What the Package Does (Title Case)
+Title: paqueteMETODOS
 Version: 0.1.0
 Author: dgonzalez80
 Maintainer: The package maintainer <yourself@somewhere.net>
@@ -10,7 +10,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
-    R (>= 3.6.0),
+    R (>= 4.0),
     cubature,
     dplyr,
     flextable,
@@ -22,4 +22,3 @@ Depends:
     randtests,
     rapportools
     
-
