@@ -137,7 +137,7 @@ quiz(
 
 ### **Pregunta 2**
 
-la siguiente tabla resume los datos recogidos en una encuesta sobre calidad de vida. El estudio recogió información de 900 personas sobre:
+La siguiente tabla resume los datos recogidos en una encuesta sobre calidad de vida. El estudio recogió información de 900 personas sobre:
 
 $A$ : realiza actividad de portiva
 $B$ : se alimenta de manera saludable
